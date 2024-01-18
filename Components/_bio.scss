@@ -1,0 +1,97 @@
+@import "./mixin";
+.bio {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gutter);
+}
+.bio__content {
+  display: flex;
+  flex-direction: column;
+}
+.bio__content-heading {
+  grid-column: 1/2;
+  font-size: var(--font-size-70);
+  font-weight: var(--font-weight-bold);
+}
+.bio__content-paragraph {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-20);
+  text-justify: inter-word;
+  margin-block-start: 3rem;
+  margin-block-end: 8rem;
+  color: var(--color-text);
+}
+.bio__myName {
+  font-weight: var(--font-weight-semi-bold);
+}
+.bio__imageContainer {
+  position: relative;
+  display: flex;
+  grid-column: 2/3;
+  align-items: flex-start;
+  justify-self: end;
+}
+.bio__imageContainer::after {
+  content: "";
+  position: absolute;
+  height: 74%;
+  width: 100%;
+  background-color: var(--color-box-img);
+  top: 3.7rem;
+  z-index: -1;
+  border-radius: 1.6rem;
+}
+.bio__imageContainer__image {
+  height: 80%;
+}
+
+.bio__content-paragraph > a.bio__almdrasa:link,
+.bio__content-paragraph > a.bio__almdrasa:visited {
+  color: var(--color-dark-green);
+}
+.bio__content-paragraph > a.bio__facebook:link,
+.bio__content-paragraph > a.bio__facebook:visited {
+  color: var(--color-darker-blue);
+}
+.bio__content-paragraph > a.bio__twitter:link,
+.bio__content-paragraph > a.bio__twitter:visited {
+  color: var(--color-light-blue);
+}
+.bio__content-paragraph > a.bio__youtube:link,
+.bio__content-paragraph > a.bio__youtube:visited {
+  color: red;
+}
+.bio__content-paragraph > a.bio__linkedin:link,
+.bio__content-paragraph > a.bio__linkedin:visited {
+  color: var(--color-dark-blue);
+}
+.bio__CTA {
+  display: flex;
+  width: 75%;
+  gap: 1.6rem;
+}
+.bio__link {
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+  font-size: var(--font-size-24);
+  padding-block: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-box-img);
+  color: var(--color-Hi);
+  border-radius: 1rem;
+}
+.download_link {
+  background-color: transparent;
+  color: var(--color-link-bg);
+}
+@keyframes jumb {
+  0% {
+    transform: translateY(-1rem);
+  }
+}
+.download_link .arrow {
+  display: inline-block;
+  translate: transform(50%, 50%);
+  animation: jumb 1s infinite ease-in-out alternate;
+}

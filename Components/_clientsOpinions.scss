@@ -1,0 +1,28 @@
+.clients__section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section-with-bg::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-grey);
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  align-self: center;
+  z-index: -1;
+}
+.clients__wrapper {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: inline;
+  padding-block: 3rem;
+}
+.client__opinion {
+  font-size: var(--font-size-20);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  flex-basis: 50%;
+}

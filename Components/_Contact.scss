@@ -1,0 +1,56 @@
+.contact__social {
+  transition: var(--transition-timing) ease-in-out;
+}
+.contact__social:hover {
+  transform: scale(1.2);
+}
+.contacMe__content {
+  align-self: center;
+}
+.contacMe__content-paragraph {
+  line-height: 1.9;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+}
+
+.contactMe__input,
+.contactMe__input__info {
+  border: 0;
+  background: transparent;
+  outline: 0;
+  display: flex;
+  gap: 2rem;
+}
+.contactMe__textarea {
+  border-bottom: 0.1rem solid var(--color-box-img);
+}
+.contactMe__input__info {
+  flex: 1;
+  flex-shrink: 0;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--color-box-img);
+}
+.contactMe__textarea {
+  display: block;
+  width: 100%;
+}
+.contactMe__button {
+  display: inline-block;
+  transition: var(--transition-timing) ease-in-out;
+  background-color: var(--color-box-img);
+  color: var(--color-white);
+  width: 25%;
+  padding: 1rem;
+  text-align: center;
+  margin-block: 2rem;
+  box-shadow: 0 0 0.5rem var(--color-shadow);
+}
+.contactMe__button:hover {
+  background-color: rgb(87, 86, 86);
+  color: rgb(202, 202, 202);
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem rgba(64, 25, 255, 0);
+}
